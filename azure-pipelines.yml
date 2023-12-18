@@ -1,4 +1,13 @@
 # Docker
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Free Trial(1)(13ed3a32-64cc-4740-88b3-8c10d4050c3d)'
+    appType: 'webApp'
+    WebAppName: 'bharathjatoth'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    enableCustomDeployment: true
+    DeploymentType: 'webDeploy'
 # Build and push an image to Azure Container Registry
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
